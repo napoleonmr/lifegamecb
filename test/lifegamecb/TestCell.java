@@ -19,4 +19,23 @@ class TestCell {
 		
 	}
 
+	@Test
+	void liveCelWithZerothanLiveNeighboursDies() {
+		
+		Cell c= new Cell(true,0 );
+		c.tick();
+		assertFalse( c.getStatus());
+		
+	}
+	
+	//Any live cell with two or three live neighbours lives on to the next generation
+	
+	@Test
+	void liveCellWithTwoOrThreeLiveNeighboursLives () {
+		
+		Cell c= new Cell(true,2 );
+		c.tick();
+		assertTrue( c.getStatus());
+		
+	}
 }
