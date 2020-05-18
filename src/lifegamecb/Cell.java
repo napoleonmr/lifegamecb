@@ -17,7 +17,8 @@ public class Cell {
 			this.status = true;
 		if (neighbours > 3)
 			this.status = false;
-
+		if(neighbours == 3)
+			this.status = true;
 	}
 
 	public boolean getStatus() {

@@ -48,5 +48,15 @@ class TestCell {
 		assertFalse(c.getStatus());
 
 	}
+	
+	//Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 
+	@Test
+	void AnyDeadCellWithExactlyThreeLiveNeighboursBecomeLiveCell() {
+
+		Cell c = new Cell(false, 3);
+		c.tick();
+		assertTrue(c.getStatus());
+
+	}
 }
