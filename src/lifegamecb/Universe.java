@@ -18,4 +18,19 @@ public class Universe {
 		return cellMatrix[i][j];
 	}
 
+	public int getNeighbours(int k, int l) {
+
+		int neighrbours = 0;
+
+		for (int i = 0; i < cellMatrix.length; i++) {
+			for (int j = 0; j < cellMatrix[0].length; j++) {
+				if (cellMatrix[i][j].getStatus() && i != k && j != l)
+					neighrbours++;
+			}
+		}
+
+		return neighrbours;
+
+	}
+
 }
