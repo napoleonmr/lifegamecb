@@ -11,15 +11,17 @@ public class Cell {
 	}
 
 	public void tick() {
-		if ( neighbours < 2)
+		if (neighbours < 2)
 			this.status = false;
-		if ( neighbours == 2 || neighbours ==3 )
+		if (neighbours == 2 || neighbours == 3)
 			this.status = true;
-		
+		if (neighbours > 3)
+			this.status = false;
+
 	}
 
 	public boolean getStatus() {
-		
+
 		return this.status;
 	}
 
