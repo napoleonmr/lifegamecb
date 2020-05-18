@@ -13,6 +13,8 @@ public class Cell {
 	public void tick() {
 		if ( neighbours < 2)
 			this.status = false;
+		if ( neighbours == 2 || neighbours ==3 )
+			this.status = true;
 		
 	}
 
